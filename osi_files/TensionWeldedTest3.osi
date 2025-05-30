@@ -1,42 +1,5 @@
-Bolt.Bolt_Hole_Type: Standard
-Bolt.Diameter:
-- '8'
-- '10'
-- '12'
-- '16'
-- '20'
-- '24'
-- '30'
-- '36'
-- '42'
-- '48'
-- '56'
-- '64'
-- '14'
-- '18'
-- '22'
-- '27'
-- '33'
-- '39'
-- '45'
-- '52'
-- '60'
-Bolt.Grade:
-- '3.6'
-- '4.6'
-- '4.8'
-- '5.6'
-- '5.8'
-- '6.8'
-- '8.8'
-- '9.8'
-- '10.9'
-- '12.9'
-Bolt.Slip_Factor: '0.3'
-Bolt.TensionType: Pretensioned
-Bolt.Type: Bearing Bolt
-Conn_Location: Short Leg
-Connector.Material: E 165 (Fe 290)
+Conn_Location: Long Leg
+Connector.Material: E 250 (Fe 410 W)A
 Connector.Plate.Thickness_List:
 - '8'
 - '10'
@@ -62,11 +25,8 @@ Connector.Plate.Thickness_List:
 - '110'
 - '120'
 Design.Design_Method: Limit State Design
-Detailing.Corrosive_Influences: 'No'
-Detailing.Edge_type: Sheared or hand flame cut
-Detailing.Gap: '0'
-Load.Axial: '28'
-Material: E 165 (Fe 290)
+Load.Axial: '70'
+Material: E 250 (Fe 410 W)A
 Member.Designation:
 - 20 x 20 x 3
 - 20 x 20 x 4
@@ -267,7 +227,9 @@ Member.Designation:
 - 200 x 100 x 15
 - 200 x 150 x 15
 - 200 x 150 x 18
-Member.Length: '900'
-Member.Material: E 165 (Fe 290)
-Member.Profile: Angles
-Module: Tension Member Design - Bolted to End Gusset
+Member.Length: '1250'
+Member.Material: E 250 (Fe 410 W)A
+Member.Profile: Back to Back Angles
+Module: Tension Member Design - Welded to End Gusset
+Weld.Fab: Field weld
+Weld.Material_Grade_OverWrite: '410'

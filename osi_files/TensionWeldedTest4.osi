@@ -1,25 +1,12 @@
-Bolt.Bolt_Hole_Type: Standard
-Bolt.Diameter:
-- '20'
-- '24'
-Bolt.Grade:
-- '5.6'
-- '6.8'
-- '9.8'
-- '12.9'
-Bolt.Slip_Factor: '0.3'
-Bolt.TensionType: Pretensioned
-Bolt.Type: Bearing Bolt
 Conn_Location: Web
-Connector.Material: E 350 (Fe 490)
+Connector.Material: E 250 (Fe 410 W)A
 Connector.Plate.Thickness_List:
-- '8'
+- '10'
+- '12'
+- '16'
 Design.Design_Method: Limit State Design
-Detailing.Corrosive_Influences: 'No'
-Detailing.Edge_type: Sheared or hand flame cut
-Detailing.Gap: '0'
-Load.Axial: '300'
-Material: E 350 (Fe 490)
+Load.Axial: '110'
+Material: E 250 (Fe 410 W)A
 Member.Designation:
 - MC 75
 - MC 100
@@ -43,6 +30,7 @@ Member.Designation:
 - MC 400
 - JC 100
 - JC 125
+- JC 150
 - JC 175
 - JC 200
 - LC 75
@@ -80,7 +68,9 @@ Member.Designation:
 - MPC 300*
 - MPC 350
 - MPC 400
-Member.Length: '1500'
-Member.Material: E 350 (Fe 490)
-Member.Profile: Back to Back Channels
-Module: Tension Member Design - Bolted to End Gusset
+Member.Length: '1250'
+Member.Material: E 165 (Fe 290)
+Member.Profile: Channels
+Module: Tension Member Design - Welded to End Gusset
+Weld.Fab: Field weld
+Weld.Material_Grade_OverWrite: '410'
