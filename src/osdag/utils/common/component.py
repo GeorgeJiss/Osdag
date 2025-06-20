@@ -2,7 +2,7 @@ from .is800_2007 import IS800_2007
 from .is800_2007 import IS800_2007
 from .material import *
 from .other_standards import *
-from ...Common import connectdb
+# from ...Common import connectdb
 import sqlite3
 import logging
 from .material import Material
@@ -13,6 +13,10 @@ from pylatex.utils import italic, NoEscape
 import math
 import numpy as np
 from .common_calculation import *
+
+KEY_DP_WELD_TYPE_FILLET = 'Fillet Weld'
+KEY_DP_FAB_SHOP = 'Shop Weld'
+KEY_DP_FAB_FIELD = 'Field weld'
 
 
 class Bolt:

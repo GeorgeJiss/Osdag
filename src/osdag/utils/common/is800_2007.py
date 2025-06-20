@@ -7,7 +7,8 @@ Started on 01 - Nov - 2018
 import math
 from ...Common import *
 # from ...Common import KEY_DP_FAB_SHOP
-
+KEY_DP_FAB_SHOP = 'Shop Weld'
+KEY_DP_FAB_FIELD = 'Field Weld'
 
 class IS800_2007(object):
     """Perform calculations on steel design as per IS 800:2007
