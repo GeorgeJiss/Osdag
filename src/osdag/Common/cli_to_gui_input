@@ -1,0 +1,47 @@
+cli_data (dict): CLI input data with the following structure:
+            {
+                'type': str,  # Connection type (e.g. 'fin_plate')
+                'inputs': {
+                    # Basic inputs
+                    'column_section': str,  # e.g. 'ISMB 300'
+                    'beam_section': str,    # e.g. 'ISMB 250'
+                    'plate_thickness': float,  # in mm
+                    'plate_length': float,    # in mm
+                    'plate_width': float,     # in mm
+                    'weld_size': float,       # in mm
+                    'bolt_diameter': float,   # in mm
+                    'bolt_grade': str,        # e.g. '8.8'
+                    'bolt_type': str,         # e.g. 'bearing'
+                    'bolt_hole_type': str,    # e.g. 'normal'
+                    'bolt_washer': bool,      # True/False
+                    'bolt_line': int,         # Number of bolt lines
+                    'bolts_one_line': int,    # Number of bolts per line
+                    'pitch': float,           # in mm
+                    'gauge': float,           # in mm
+                    'end_distance': float,    # in mm
+                    'edge_distance': float,   # in mm
+                    'connection_type': str,   # e.g. 'col_web_beam_web'
+                    'design_method': str,     # e.g. 'LSD'
+                    'safety_factor': float,   # e.g. 1.5
+                    'shear_force': float,     # in kN
+                    'axial_force': float,     # in kN
+                    'moment': float,          # in kNm
+                    
+                    # Design preferences (optional)
+                    'design_preferences': {
+                        'weld': {
+                            'weld_type': str,  # e.g. 'fillet'
+                            'weld_size': float  # in mm
+                        },
+                        'detailing': {
+                            'edge_distance': float,  # in mm
+                            'pitch': float,         # in mm
+                            'gauge': float          # in mm
+                        },
+                        'design': {
+                            'safety_factor': float,  # e.g. 1.5
+                            'design_method': str     # e.g. 'LSD'
+                        }
+                    }
+                }
+            }
