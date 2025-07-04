@@ -705,7 +705,7 @@ class Tension_welded(Member):
 
         "initialisation of components required to design a tension member along with connection"
 
-        super(Tension_welded,self).set_input_values(self, design_dictionary)
+        super(Tension_welded,self).set_input_values(design_dictionary)
         print(design_dictionary,"input values are set. Doing preliminary member checks")
         self.module = design_dictionary[KEY_MODULE]
         self.sizelist = design_dictionary[KEY_SECSIZE]
@@ -736,7 +736,7 @@ class Tension_welded(Member):
         self.weld_design_status = False
         self.thick_design_status = False
         self.plate_design_status = False
-        self.initial_member_capacity(self,design_dictionary)
+        self.initial_member_capacity(design_dictionary)
 
 
     def select_section(self, design_dictionary, selectedsize):
@@ -920,7 +920,7 @@ class Tension_welded(Member):
         min_yield = 0
 
         if self.count == 0:
-            self.max_section(self, design_dictionary, self.sizelist)
+            self.max_section(design_dictionary, self.sizelist)
             [self.force1, self.len1, self.slen1, self.gyr1] = self.max_force_length(self, self.max_area)
             [self.force2, self.len2, self.slen2, self.gyr2] = self.max_force_length(self, self.max_gyr)
         else:
