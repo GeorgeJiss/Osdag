@@ -203,14 +203,13 @@ def simulate_gui_inputs(test_case_data: dict) -> dict:
     # assign fu and fy based on material and thickness
     for fu_key, fy_key, mat_key, thickness in material_keys:
         material = design_dictionary.get(mat_key, "E 250 (Fe 410 W)A")
-        fu, fy, fy_20_40, fy_40 = get_material_strength(material, float(thickness) if thickness is not None else None)
+        fu, fy, fy_20_40, fy_40 = get_material_strength(material, thickness)
         design_dictionary[fu_key] = str(fu)
         design_dictionary[fy_key] = str(fy)
-        if fu_key == "KEY_CONNECTOR_FU":
+        if fy_20_40 is not None:
             design_dictionary['KEY_CONNECTOR_FY_20_40'] = str(fy_20_40)
+        if fy_40 is not None:
             design_dictionary['KEY_CONNECTOR_FY_40'] = str(fy_40)
-    
-    # close database connection
     conn.close()
     return design_dictionary
 
